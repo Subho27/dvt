@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Load plotly.js into the DOM -->
+    <title>Anti-corruption cases - TreeMap</title>
+	<script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
+    <script src="./_TREEMAP_DATA/treemap_crime_rate_anti_corruption.js"></script>
+</head>
+
+<body>
+	<div id='myDiv' style="height: 700px;"></div>
+
+    <script>
+        var labels = treemapData.labels
+        var parents = treemapData.parents
+        var data = [{
+            type: "treemap",
+            branchvalues: "total",
+            labels: labels,
+            parents: parents,
+            values: treemapData.values,
+            textinfo: "label+value+percent parent",
+            outsidetextfont: {"size": 20, "color": "#377eb8"},
+            marker: {"line": {"width": 2}},
+            pathbar: {"visible": true}
+            }];
+        var layout = {
+            title: "Anti-corruption cases by State and Year",
+            annotations: [{
+                showarrow: false,
+                visible: false 
+            }]
+        }
+
+        Plotly.newPlot('myDiv', data, layout)
+    </script>
+
+</body>
+
+</html>

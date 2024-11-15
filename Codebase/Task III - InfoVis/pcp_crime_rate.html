@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Parallel Coordinates Plot</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./_PCP_DATA/pcp_crime_rate.js"></script>
+</head>
+<body>
+    <div id="parallel-coordinates-plot" style="width:100%;height:600px;"></div>
+
+    <script>
+        // Sample Data
+        const data = [{
+            type: 'parcoords',
+            line: {
+                color: crime_data.ipc,
+                colorscale: 'Viridis',
+                showscale: true
+            },
+            dimensions: [
+                {
+                    range: [Math.min(...crime_data.year), Math.max(...crime_data.year)],
+                    label: 'Year',
+                    values: crime_data.year,
+                    tickvals: crime_data.year,
+                    ticktext: crime_data.year_str
+                },
+                {
+                    range: [Math.min(...crime_data.ipc), Math.max(...crime_data.ipc)],
+                    label: 'Total IPC Crimes',
+                    values: crime_data.ipc,
+                    tickformat: '.0f'
+                },
+                {
+                    range: [Math.min(...crime_data.sc), Math.max(...crime_data.sc)],
+                    label: 'Total IPC Crimes against SC',
+                    values: crime_data.sc
+                },
+                {
+                    range: [Math.min(...crime_data.st), Math.max(...crime_data.st)],
+                    label: 'Total IPC Crimes against ST',
+                    values: crime_data.st
+                },
+                {
+                    range: [Math.min(...crime_data.woman), Math.max(...crime_data.woman)],
+                    label: 'Total IPC Crimes against Women',
+                    values: crime_data.woman
+                },
+                {
+                    range: [Math.min(...crime_data.child), Math.max(...crime_data.child)],
+                    label: 'Total IPC Crimes against Children',
+                    values: crime_data.child
+                }
+            ]
+        }];
+
+        // Layout for better appearance
+        const layout = {
+            title: 'Interactive Crime Data Over Time',
+            plot_bgcolor: '#f0f0f0',
+            paper_bgcolor: '#fff',
+            margin: {l: 80, r: 80, t: 100, b: 50},
+        };
+
+        // Render the plot
+        Plotly.newPlot('parallel-coordinates-plot', data, layout);
+
+        // Interactivity: Tooltip on hover
+        const plotElement = document.getElementById('parallel-coordinates-plot');
+        plotElement.on('plotly_hover', function(data){
+            const hoverInfo = data.points.map(d => {
+                return `Dimension: ${d.label}<br>Value: ${d.value}`;
+            }).join("<br>");
+
+            // Display hover data
+            const tooltip = document.createElement('div');
+            tooltip.setAttribute('id', 'tooltip');
+            tooltip.innerHTML = `<b>Hovered Data</b><br>${hoverInfo}`;
+            tooltip.style.position = 'absolute';
+            tooltip.style.top = `${data.event.clientY + 10}px`;
+            tooltip.style.left = `${data.event.clientX + 10}px`;
+            tooltip.style.backgroundColor = '#fff';
+            tooltip.style.border = '1px solid #ddd';
+            tooltip.style.padding = '8px';
+            tooltip.style.zIndex = 1000;
+            document.body.appendChild(tooltip);
+        });
+
+        plotElement.on('plotly_unhover', function() {
+            const tooltip = document.getElementById('tooltip');
+            if (tooltip) {
+                tooltip.remove();
+            }
+        });
+
+    </script>
+</body>
+</html>

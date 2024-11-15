@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Parallel Coordinates Plot</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./_PCP_DATA/pcp_crime_rate_state.js"></script>
+</head>
+<body>
+    <div id="parallel-coordinates-plot" style="width:100%;height:600px;"></div>
+    <script>
+        // Sample Data
+        const data = [{
+            type: 'parcoords',
+            line: {
+                color: crime_data_state['year'],
+                colorscale: 'Viridis',
+                showscale: true
+            },
+            dimensions: [
+                {
+                    range: [Math.min(...crime_data_state.year), Math.max(...crime_data_state.year)],
+                    label: 'Year',
+                    values: crime_data_state['year'],
+                    tickvals: crime_data_state['year'],
+                    ticktext: crime_data_state['year_str']
+                },
+                {
+                    range: [Math.min(...crime_data_state.hp), Math.max(...crime_data_state.hp)],
+                    label: 'Himachal Pradesh',
+                    values: crime_data_state['hp'],
+                },
+                {
+                    range: [Math.min(...crime_data_state.jk), Math.max(...crime_data_state.jk)],
+                    label: 'Jammu & Kashmir',
+                    values: crime_data_state['jk'],
+                },
+                {
+                    range: [Math.min(...crime_data_state.jh), Math.max(...crime_data_state.jh)],
+                    label: 'Jharkhand',
+                    values: crime_data_state['jh'],
+                },
+                {
+                    range: [Math.min(...crime_data_state.ka), Math.max(...crime_data_state.ka)],
+                    label: 'Karnataka',
+                    values: crime_data_state['ka'],
+                },
+                {
+                    range: [Math.min(...crime_data_state.kl), Math.max(...crime_data_state.kl)],
+                    label: 'Kerala',
+                    values: crime_data_state['kl'],
+                },
+                {
+                    range: [Math.min(...crime_data_state.ld), Math.max(...crime_data_state.ld)],
+                    label: 'Lakshadweep',
+                    values: crime_data_state['ld'],
+                },
+                {
+                    range: [Math.min(...crime_data_state.mp), Math.max(...crime_data_state.mp)],
+                    label: 'Madhya Pradesh',
+                    values: crime_data_state['mp'],
+                },
+                {
+                    range: [Math.min(...crime_data_state.mh), Math.max(...crime_data_state.mh)],
+                    label: 'Maharashtra',
+                    values: crime_data_state['mh'],
+                },
+                {
+                    range: [Math.min(...crime_data_state.mn), Math.max(...crime_data_state.mn)],
+                    label: 'Manipur',
+                    values: crime_data_state['mn'],
+                },
+                {
+                    range: [Math.min(...crime_data_state.ml), Math.max(...crime_data_state.ml)],
+                    label: 'Meghalaya',
+                    values: crime_data_state['ml'],
+                },
+                {
+                    range: [Math.min(...crime_data_state.mz), Math.max(...crime_data_state.mz)],
+                    label: 'Mizoram',
+                    values: crime_data_state['mz'],
+                },
+                {
+                    range: [Math.min(...crime_data_state.dl), Math.max(...crime_data_state.dl)],
+                    label: 'NCT of Delhi',
+                    values: crime_data_state['dl'],
+                }
+            ]
+        }];
+
+        // Layout for better appearance
+        const layout = {
+            title: 'Interactive Crime Data Statewise Over Time',
+            plot_bgcolor: '#f0f0f0',
+            paper_bgcolor: '#fff',
+            margin: {l: 80, r: 80, t: 100, b: 50},
+        };
+
+        // Render the plot
+        Plotly.newPlot('parallel-coordinates-plot', data, layout);
+
+        // Interactivity: Tooltip on hover
+        const plotElement = document.getElementById('parallel-coordinates-plot');
+        plotElement.on('plotly_hover', function(data){
+            const hoverInfo = data.points.map(d => {
+                return `Dimension: ${d.label}<br>Value: ${d.value}`;
+            }).join("<br>");
+
+            // Display hover data
+            const tooltip = document.createElement('div');
+            tooltip.setAttribute('id', 'tooltip');
+            tooltip.innerHTML = `<b>Hovered Data</b><br>${hoverInfo}`;
+            tooltip.style.position = 'absolute';
+            tooltip.style.top = `${data.event.clientY + 10}px`;
+            tooltip.style.left = `${data.event.clientX + 10}px`;
+            tooltip.style.backgroundColor = '#fff';
+            tooltip.style.border = '1px solid #ddd';
+            tooltip.style.padding = '8px';
+            tooltip.style.zIndex = 1000;
+            document.body.appendChild(tooltip);
+        });
+
+        plotElement.on('plotly_unhover', function() {
+            const tooltip = document.getElementById('tooltip');
+            if (tooltip) {
+                tooltip.remove();
+            }
+        });
+    </script>
+</body>
+</html>

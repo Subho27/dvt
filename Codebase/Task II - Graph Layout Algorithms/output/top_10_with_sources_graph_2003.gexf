@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-11-15">
+    <creator>NetworkX 3.4.2</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Secretlondon" label="Secretlondon" />
+      <node id="Snoyes" label="Snoyes" />
+      <node id="Finlay McWalter" label="Finlay McWalter" />
+      <node id="Maximus Rex" label="Maximus Rex" />
+      <node id="Adam Bishop" label="Adam Bishop" />
+      <node id="Dori" label="Dori" />
+      <node id="Alexandros" label="Alexandros" />
+      <node id="G-Man" label="G-Man" />
+      <node id="Pakaran" label="Pakaran" />
+      <node id="Morwen" label="Morwen" />
+      <node id="Ihcoyc" label="Ihcoyc" />
+      <node id="Ed Poor" label="Ed Poor" />
+      <node id="Cimon avaro" label="Cimon avaro" />
+      <node id="Kosebamse" label="Kosebamse" />
+      <node id="Michael Hardy" label="Michael Hardy" />
+      <node id="168..." label="168..." />
+      <node id="Daniel Quinlan" label="Daniel Quinlan" />
+      <node id="Jake Nelson" label="Jake Nelson" />
+      <node id="Cyan" label="Cyan" />
+      <node id="RickK" label="RickK" />
+      <node id="Arwel Parry" label="Arwel Parry" />
+      <node id="Jwrosenzweig" label="Jwrosenzweig" />
+      <node id="Vicki Rosenzweig" label="Vicki Rosenzweig" />
+      <node id="Minesweeper" label="Minesweeper" />
+      <node id="Hephaestos" label="Hephaestos" />
+      <node id="Fuzheado" label="Fuzheado" />
+      <node id="Dysprosia" label="Dysprosia" />
+      <node id="Angela" label="Angela" />
+      <node id="Jiang" label="Jiang" />
+      <node id="Wik" label="Wik" />
+      <node id="Mark Ryan" label="Mark Ryan" />
+      <node id="Bjcairns" label="Bjcairns" />
+      <node id="Greenmountainboy" label="Greenmountainboy" />
+      <node id="Tim Starling" label="Tim Starling" />
+      <node id="Timwi" label="Timwi" />
+      <node id="Heron" label="Heron" />
+      <node id="Menchi" label="Menchi" />
+      <node id="Ark30inf" label="Ark30inf" />
+      <node id="Muriel Gottrop" label="Muriel Gottrop" />
+      <node id="Ugen64" label="Ugen64" />
+      <node id="Cyp" label="Cyp" />
+      <node id="Jtdirl" label="Jtdirl" />
+      <node id="Bcorr" label="Bcorr" />
+    </nodes>
+    <edges>
+      <edge source="Secretlondon" target="Bcorr" id="0" weight="1" />
+      <edge source="Secretlondon" target="Dori" id="1" weight="1" />
+      <edge source="Secretlondon" target="Finlay McWalter" id="2" weight="1" />
+      <edge source="Secretlondon" target="Ihcoyc" id="3" weight="1" />
+      <edge source="Secretlondon" target="Timwi" id="4" weight="1" />
+      <edge source="Snoyes" target="Ihcoyc" id="5" weight="1" />
+      <edge source="Snoyes" target="Michael Hardy" id="6" weight="1" />
+      <edge source="Snoyes" target="Secretlondon" id="7" weight="1" />
+      <edge source="Maximus Rex" target="168..." id="8" weight="1" />
+      <edge source="Adam Bishop" target="Michael Hardy" id="9" weight="1" />
+      <edge source="Adam Bishop" target="Muriel Gottrop" id="10" weight="1" />
+      <edge source="Adam Bishop" target="Secretlondon" id="11" weight="1" />
+      <edge source="Dori" target="168..." id="12" weight="1" />
+      <edge source="Dori" target="Finlay McWalter" id="13" weight="1" />
+      <edge source="Dori" target="Pakaran" id="14" weight="1" />
+      <edge source="Alexandros" target="Pakaran" id="15" weight="1" />
+      <edge source="G-Man" target="Arwel Parry" id="16" weight="1" />
+      <edge source="G-Man" target="Dori" id="17" weight="1" />
+      <edge source="G-Man" target="Morwen" id="18" weight="1" />
+      <edge source="Pakaran" target="168..." id="19" weight="1" />
+      <edge source="Pakaran" target="Finlay McWalter" id="20" weight="1" />
+      <edge source="Pakaran" target="Timwi" id="21" weight="1" />
+      <edge source="Morwen" target="Secretlondon" id="22" weight="1" />
+      <edge source="Ihcoyc" target="Bcorr" id="23" weight="1" />
+      <edge source="Ed Poor" target="Arwel Parry" id="24" weight="1" />
+      <edge source="Ed Poor" target="Bcorr" id="25" weight="1" />
+      <edge source="Ed Poor" target="Pakaran" id="26" weight="1" />
+      <edge source="Ed Poor" target="Snoyes" id="27" weight="1" />
+      <edge source="Cimon avaro" target="Finlay McWalter" id="28" weight="1" />
+      <edge source="Cimon avaro" target="Muriel Gottrop" id="29" weight="1" />
+      <edge source="Kosebamse" target="Muriel Gottrop" id="30" weight="1" />
+      <edge source="Daniel Quinlan" target="Bcorr" id="31" weight="1" />
+      <edge source="Daniel Quinlan" target="Finlay McWalter" id="32" weight="1" />
+      <edge source="Daniel Quinlan" target="Muriel Gottrop" id="33" weight="1" />
+      <edge source="Daniel Quinlan" target="Timwi" id="34" weight="1" />
+      <edge source="Daniel Quinlan" target="Ugen64" id="35" weight="1" />
+      <edge source="Jake Nelson" target="Daniel Quinlan" id="36" weight="1" />
+      <edge source="Jake Nelson" target="Snoyes" id="37" weight="1" />
+      <edge source="Cyan" target="168..." id="38" weight="1" />
+      <edge source="Cyan" target="Ark30inf" id="39" weight="1" />
+      <edge source="Cyan" target="Bcorr" id="40" weight="-1" />
+      <edge source="Cyan" target="Morwen" id="41" weight="1" />
+      <edge source="Cyan" target="Muriel Gottrop" id="42" weight="1" />
+      <edge source="Cyan" target="Secretlondon" id="43" weight="1" />
+      <edge source="RickK" target="Michael Hardy" id="44" weight="1" />
+      <edge source="Arwel Parry" target="Finlay McWalter" id="45" weight="1" />
+      <edge source="Arwel Parry" target="Morwen" id="46" weight="1" />
+      <edge source="Arwel Parry" target="Pakaran" id="47" weight="1" />
+      <edge source="Jwrosenzweig" target="Ark30inf" id="48" weight="1" />
+      <edge source="Jwrosenzweig" target="Arwel Parry" id="49" weight="1" />
+      <edge source="Jwrosenzweig" target="Daniel Quinlan" id="50" weight="1" />
+      <edge source="Vicki Rosenzweig" target="Arwel Parry" id="51" weight="1" />
+      <edge source="Minesweeper" target="Daniel Quinlan" id="52" weight="1" />
+      <edge source="Hephaestos" target="168..." id="53" weight="1" />
+      <edge source="Hephaestos" target="Ark30inf" id="54" weight="1" />
+      <edge source="Hephaestos" target="Arwel Parry" id="55" weight="1" />
+      <edge source="Hephaestos" target="Bcorr" id="56" weight="1" />
+      <edge source="Hephaestos" target="Michael Hardy" id="57" weight="1" />
+      <edge source="Hephaestos" target="Pakaran" id="58" weight="1" />
+      <edge source="Hephaestos" target="Ugen64" id="59" weight="1" />
+      <edge source="Fuzheado" target="Arwel Parry" id="60" weight="1" />
+      <edge source="Dysprosia" target="Finlay McWalter" id="61" weight="1" />
+      <edge source="Dysprosia" target="Michael Hardy" id="62" weight="1" />
+      <edge source="Dysprosia" target="Morwen" id="63" weight="1" />
+      <edge source="Dysprosia" target="Muriel Gottrop" id="64" weight="1" />
+      <edge source="Dysprosia" target="Pakaran" id="65" weight="1" />
+      <edge source="Angela" target="168..." id="66" weight="1" />
+      <edge source="Angela" target="Arwel Parry" id="67" weight="1" />
+      <edge source="Angela" target="Bcorr" id="68" weight="1" />
+      <edge source="Angela" target="Daniel Quinlan" id="69" weight="1" />
+      <edge source="Angela" target="Dori" id="70" weight="1" />
+      <edge source="Angela" target="Ihcoyc" id="71" weight="1" />
+      <edge source="Angela" target="Michael Hardy" id="72" weight="1" />
+      <edge source="Angela" target="Morwen" id="73" weight="1" />
+      <edge source="Angela" target="Muriel Gottrop" id="74" weight="1" />
+      <edge source="Angela" target="Pakaran" id="75" weight="1" />
+      <edge source="Angela" target="Secretlondon" id="76" weight="1" />
+      <edge source="Angela" target="Timwi" id="77" weight="1" />
+      <edge source="Jiang" target="Bcorr" id="78" weight="1" />
+      <edge source="Jiang" target="Daniel Quinlan" id="79" weight="1" />
+      <edge source="Jiang" target="Dori" id="80" weight="1" />
+      <edge source="Jiang" target="Timwi" id="81" weight="1" />
+      <edge source="Wik" target="Pakaran" id="82" weight="-1" />
+      <edge source="Wik" target="Secretlondon" id="83" weight="1" />
+      <edge source="Mark Ryan" target="Bcorr" id="84" weight="1" />
+      <edge source="Mark Ryan" target="Timwi" id="85" weight="1" />
+      <edge source="Bjcairns" target="Michael Hardy" id="86" weight="1" />
+      <edge source="Greenmountainboy" target="Timwi" id="87" weight="1" />
+      <edge source="Tim Starling" target="Daniel Quinlan" id="88" weight="1" />
+      <edge source="Heron" target="Michael Hardy" id="89" weight="1" />
+      <edge source="Menchi" target="Arwel Parry" id="90" weight="1" />
+      <edge source="Menchi" target="Cyan" id="91" weight="1" />
+      <edge source="Menchi" target="Fuzheado" id="92" weight="1" />
+      <edge source="Menchi" target="RickK" id="93" weight="1" />
+      <edge source="Menchi" target="Timwi" id="94" weight="1" />
+      <edge source="Ark30inf" target="Arwel Parry" id="95" weight="1" />
+      <edge source="Ark30inf" target="Daniel Quinlan" id="96" weight="1" />
+      <edge source="Ugen64" target="Bcorr" id="97" weight="-1" />
+      <edge source="Cyp" target="168..." id="98" weight="1" />
+      <edge source="Cyp" target="Bcorr" id="99" weight="1" />
+      <edge source="Cyp" target="Dysprosia" id="100" weight="1" />
+      <edge source="Cyp" target="Ihcoyc" id="101" weight="1" />
+      <edge source="Cyp" target="Michael Hardy" id="102" weight="1" />
+      <edge source="Cyp" target="Pakaran" id="103" weight="1" />
+      <edge source="Cyp" target="Timwi" id="104" weight="1" />
+      <edge source="Jtdirl" target="Michael Hardy" id="105" weight="1" />
+    </edges>
+  </graph>
+</gexf>
